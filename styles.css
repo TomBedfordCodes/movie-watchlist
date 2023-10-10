@@ -1,0 +1,150 @@
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    height: 100%;
+    font-family: 'Inter', sans-serif;
+    user-select: none;
+}
+
+body {
+    display: grid;
+    grid-template: 25vh 1rem 1rem 1fr / 1fr 8fr 1fr;
+}
+
+button {
+    font-family: inherit;
+}
+
+header {
+    background-image: url("./images/THJJRUhNlEc.png");
+    background-color: rgba(0, 0, 0, 0.9);
+    background-size: cover;
+    grid-row: 1 / 3;
+    grid-column: 1 / 4;
+}
+
+#header-text {
+    grid-row: 1 / 3;
+    grid-column: 2 / 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+#header-text > h1 {
+    font-weight: 800;
+    color: white;
+    font-size: 1.5rem;
+}
+
+#header-text > h2 {
+    font-weight: 700;
+    color: white;
+    font-size: 0.675rem;
+}
+
+#header-text > h2 > a {
+    text-decoration: none;
+    color: white;
+}
+
+#header-text > h2 > a:hover {
+    text-decoration: none;
+    color: rgb(215, 215, 215);
+}
+
+#header-text > h2 > a:active {
+    text-decoration: none;
+    color: rgb(190, 190, 190);
+}
+
+
+
+#searchbar-container {
+    display: flex;
+    grid-row: 2 / 4;
+    grid-column: 2 / 3;
+    border: none;
+    margin: 0 auto;
+    width: 100%;
+    justify-content: center;
+    max-width: 600px;
+}
+
+#searchbar-container > input {
+    width: 100%;
+    height: 100%;
+    border-radius: 4px 0 0 4px;
+    border: 1px solid #D1D5DB;
+    border-right: none;
+    margin-right: -1px;
+    padding: 0 0.5em;
+}
+
+#searchbar-container > button {
+    width: 35%;
+    height: 100%;
+    border-radius: 0 4px 4px 0;
+    border: 1px solid #D1D5DB;
+    background-color: #F9FAFB;
+}
+
+#searchbar-container > button:hover {
+    background-color: rgb(232, 232, 232);
+}
+
+#searchbar-container > button:active {
+    background-color: rgb(212, 212, 212);
+}
+
+
+
+#movies-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5em;
+    grid-row: 4 / 5;
+    grid-column: 2 / 3;
+}
+
+#no-movies-search {
+    display: flex;  /* Can't seem to use 'hidden' property of this div, so use display: none instead */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#movies-container h2 {
+    font-weight: 700;
+    font-size: 1.125rem;
+    color: #DFDDDD;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+@media(min-width:600px) {
+    #header-text > h1 {
+        font-size: 2.8rem;
+    }
+
+    #header-text > h2 {
+        font-size: 0.975rem;
+    }
+}
+
+
+
+
