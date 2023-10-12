@@ -16,22 +16,20 @@
             <h1>My Watchlist</h1>
             <h2><a href="./index.html">Search for movies</a></h2>
         </div>
-        <!-- <div id="searchbar-container">
-            <input type="text" placeholder="">
-            <button>Search</button>
-        </div> -->
         <div id="movies-container">
             <div id="no-movies-search">
-                <img src="./images/movieReelIcon.png">
-                <h2>Start exploring</h2>
+                <h2>Your watchlist is looking a little empty...</h2>
+                <div>
+                    <a href="./index.html" class="empty-watchlist-btn-container">
+                        <img src="./images/plusIcon.png">
+                        <h3>Let's add some movies!</h3>
+                    </a>
+                </div>
             </div>
             <div id="movies-list-container" hidden>
                 <!-- JS file generates code for movies here -->
             </div>
-            <div id="failed-search" hidden>
-                <h2>Unable to find what you're looking for. Please try another search.</h2>
-            </div>
         </div>
-        <script src="./index.js"></script>
+        <script src="./watchlist.js"></script>
     </body>
 </html>
