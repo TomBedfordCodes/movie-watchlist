@@ -1,7 +1,7 @@
 
 // DOM ELEMENTS
-const moviesListContainer = document.getElementById("movies-list-container")
-const noMoviesContainer = document.getElementById("no-movies-search")
+const moviesListContainer = document.getElementById("movies-list-container2")
+const noMoviesContainer = document.getElementById("no-movies-container")
 
 
 // ON PAGE STARTUP
