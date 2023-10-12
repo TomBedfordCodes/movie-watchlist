@@ -14,6 +14,9 @@ function updateWatchlistHtml() {
     if (Object.keys(localStorage).length <= 0) {
         noMoviesContainer.style.display = "flex"
         return
+    } else if (Object.keys(localStorage).length === 1 && Object.keys(localStorage)[0] === "deckId") {
+        noMoviesContainer.style.display = "flex"
+        return
     }
     moviesListContainer.hidden = false
     noMoviesContainer.style.display = "none"
