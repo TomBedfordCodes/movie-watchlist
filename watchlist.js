@@ -19,6 +19,9 @@ function updateWatchlistHtml() {
     noMoviesContainer.style.display = "none"
     let htmlStr = ""
     for (let key of Object.keys(localStorage)) {
+        if (key === "deckId") {
+            continue
+        }
         const movie = JSON.parse(localStorage.getItem(key))
         htmlStr += `
             <div class="movie-card">
