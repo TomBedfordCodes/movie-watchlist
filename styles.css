@@ -139,6 +139,12 @@ header {
     user-select: none;
 }
 
+#no-movies-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #movies-container h2,
 #movies-container2 h2 {
     font-weight: 700;

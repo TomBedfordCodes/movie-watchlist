@@ -1,6 +1,6 @@
 
 // DOM ELEMENTS
-const moviesListContainer = document.getElementById("movies-list-container2")
+const watchlistMoviesContainer = document.getElementById("movies-list-container2")
 const noMoviesContainer = document.getElementById("no-movies-container")
 
 
@@ -18,7 +18,7 @@ function updateWatchlistHtml() {
         noMoviesContainer.style.display = "flex"
         return
     }
-    moviesListContainer.hidden = false
+    watchlistMoviesContainer.hidden = false
     noMoviesContainer.style.display = "none"
     let htmlStr = ""
     for (let key of Object.keys(localStorage)) {
@@ -45,13 +45,13 @@ function updateWatchlistHtml() {
             </div>
         `
     }
-    moviesListContainer.innerHTML = htmlStr
+    watchlistMoviesContainer.innerHTML = htmlStr
 }
 
 
 
 // EVENT LISTENER FOR REMOVE FROM WATCHLIST BUTTONS
-moviesListContainer.addEventListener("click", function(e) {
+watchlistMoviesContainer.addEventListener("click", function(e) {
     if (!e.target.dataset.keyindex) {
         return
     }
@@ -67,9 +67,9 @@ moviesListContainer.addEventListener("click", function(e) {
         const card = e.target.parentElement.parentElement
         card.parentElement.removeChild(card)
     }
-    if (moviesListContainer.children.length <= 0) {
+    if (watchlistMoviesContainer.children.length <= 0) {
         noMoviesContainer.style.display = "flex"
-        moviesListContainer.hidden = true
+        watchlistMoviesContainer.hidden = true
     }
 })
 
