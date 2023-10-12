@@ -14,7 +14,9 @@ function updateWatchlistHtml() {
     if (Object.keys(localStorage).length <= 0) {
         noMoviesContainer.style.display = "flex"
         return
-    } else if (Object.keys(localStorage).length === 1 && Object.keys(localStorage)[0] === "deckId") {
+    } else if (Object.keys(localStorage).length === 1 && 
+            Object.keys(localStorage)[0] === "deckId" || 
+            Object.keys(localStorage)[0] ==="firebase:host:editbookpro-d9930-default-rtdb.europe-west1.firebasedatabase.app") {
         noMoviesContainer.style.display = "flex"
         return
     }

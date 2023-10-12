@@ -132,7 +132,6 @@ header {
     justify-content: center;
     align-items: center;
     user-select: none;
-    /* cursor: pointer; */
 }
 
 .failed-search {

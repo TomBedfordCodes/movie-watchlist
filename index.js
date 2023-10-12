@@ -81,6 +81,18 @@ function revertSearchPlaceholder() {
 
 
 
+
+
+// TODO 
+// - Dont use IDs as the main key in localStorage - access a dictionary of any movies using a known  
+//      key and loop through those. Avoids any unknown other keys getting included.
+
+
+
+
+
+
+
 // EVENT LISTENERS
 
 // For add to watchlist buttons
@@ -97,10 +109,6 @@ moviesListContainer.addEventListener("click", function(e) {
     delete e.target.dataset.keyindex
 })
 
-// // For empty search div (to focus search bar)
-// emptySearchDiv.addEventListener("click", function() {
-//     searchInput.focus()
-// })
 
 // For main search button
 searchBtn.addEventListener("click", function(e) {
