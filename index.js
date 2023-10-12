@@ -120,7 +120,7 @@ searchBtn.addEventListener("click", function(e) {
             let fetches = []
             movieIdsArr.forEach((movieId, index) => {
                 fetches.push(
-                    fetch(`http://www.omdbapi.com/?apikey=f57e4cbb&i=${movieId}`)
+                    fetch(`https://www.omdbapi.com/?apikey=f57e4cbb&i=${movieId}`)
                         .then(res => res.json())
                         .then(movieData => {
                             movieDataDict[index] = movieData
@@ -136,7 +136,7 @@ searchBtn.addEventListener("click", function(e) {
 
 // GET SEARCH RESULTS ARRAY (WITHIN A RETURNED PROMISE)
 function getSearchIdsArrPromise(searchTerm) {
-    return fetch(`http://www.omdbapi.com/?apikey=f57e4cbb&s=${searchTerm}&type=movie`)
+    return fetch(`https://www.omdbapi.com/?apikey=f57e4cbb&s=${searchTerm}&type=movie`)
         .then(res => res.json())
         .then(data => {
             if (!data.Search) {
