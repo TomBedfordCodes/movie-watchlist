@@ -10,7 +10,6 @@ const localStoreWatchlistKey = "movieWatchlist"
 
 
 
-
 // ON PAGE STARTUP
 updateWatchlistHtml()
 
@@ -24,24 +23,9 @@ function updateWatchlistHtml() {
         noMoviesContainer.style.display = "flex"
         return
     }
-    // if (Object.keys(localStorage).length <= 0) {
-    // if (JSON.parse(localStorage.getItem(localStoreKey)).length <= 0) {
-    //     noMoviesContainer.style.display = "flex"
-    //     return
-    // } else if (Object.keys(localStorage).length === 1 && 
-    //         Object.keys(localStorage)[0] === "deckId" || 
-    //         Object.keys(localStorage)[0] ==="firebase:host:editbookpro-d9930-default-rtdb.europe-west1.firebasedatabase.app") {
-    //     noMoviesContainer.style.display = "flex"
-    //     return
-    // }
     watchlistMoviesContainer.hidden = false
     noMoviesContainer.style.display = "none"
     let htmlStr = ""
-    // for (let key of Object.keys(localStorage)) {
-        // if (key === "deckId") {
-        //     continue
-        // }
-    // for (let key of JSON.parse(localStorage.getItem(localStoreKey))) {
     for (let key of Object.keys(localStoreWatchlistDict)) {
         const movie = localStoreWatchlistDict[key]
         htmlStr += `

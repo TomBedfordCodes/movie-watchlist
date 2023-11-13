@@ -8,6 +8,7 @@ let movieDataDict = {}
 let localStoreDict = {}
 const localStoreKey = "movieWatchlist"
 
+
 localStoreDict = JSON.parse(localStorage.getItem(localStoreKey))
 if (!localStoreDict) {
     localStoreDict = {}
@@ -18,7 +19,7 @@ if (!localStoreDict) {
 const moviesListContainer = document.getElementById("movies-list-container")
 const searchInput = document.getElementById("search-input")
 const searchBtn = document.getElementById("search-btn")
-// const emptySearchDiv = document.getElementById("no-movies-search")
+
 
 
 // UPDATE THE SEARCH RESULTS CONTAINER'S HTML BASED ON GLOBAL RESULTS DICTIONARY
@@ -103,7 +104,6 @@ moviesListContainer.addEventListener("click", function(e) {
     }
     const id = movieDataDict[e.target.dataset.keyindex].imdbID
     const data = movieDataDict[e.target.dataset.keyindex]
-    // localStorage.setItem(id, JSON.stringify(data))
     localStoreDict[id] = data
     localStorage.setItem(localStoreKey, JSON.stringify(localStoreDict))
     e.target.innerText = "Added!"
