@@ -68,6 +68,15 @@ function searchFailedHtml() {
     `
 }
 
+// UPDATE SEARCH CONTAINER'S HTML IF THERE'S AN ERROR
+function searchErrorHtml() {
+    moviesListContainer.innerHTML = `
+        <div class="failed-search">
+            <h2>An unknown error occured. Please try another search.</h2>
+        </div>
+    `
+}
+
 // SHOW THAT SEARCH IS HAPPENING WITH SEARCH CONTAINER HTML
 function searchUnderwayHtml() {
     moviesListContainer.innerHTML = `
@@ -142,6 +151,7 @@ searchBtn.addEventListener("click", function(e) {
                 updateSearchListHtml()
             })
         })
+        .catch(err => searchErrorHtml())
 })
     
 
@@ -160,5 +170,6 @@ function getSearchIdsArrPromise(searchTerm) {
             }
             return movieIds
         })
+        .catch(err => searchErrorHtml())
 }
 
